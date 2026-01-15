@@ -1,6 +1,6 @@
 {
   "name": "Aman Translations",
-  "description": "A cutting-edge AI workspace featuring real-time voice interaction, high-fidelity image generation, and deep reasoning chat powered by Gemini 3.",
+  "description": "Professional Tigrinya, Amharic, and English interpretation and translation services for legal, medical, and institutional clients.",
   "requestFramePermissions": [
     "camera",
     "microphone"

@@ -78,7 +78,7 @@ const Footer: React.FC<FooterProps> = ({ setView }) => {
             <div className="flex items-start gap-3">
               <MapPin className="w-4 h-4 text-[#00A3E0] shrink-0 mt-1" />
               <span>
-                31134 Hildesheim, Germany
+                Lucienvörder Str. 9, 31134 Hildesheim, Niedersachsen, Germany
               </span>
             </div>
             <div className="flex items-center gap-3"><Phone className="w-4 h-4 text-emerald-500" /> WhatsApp: +49 155 60029057</div>

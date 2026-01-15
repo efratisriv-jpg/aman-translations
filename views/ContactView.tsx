@@ -83,8 +83,8 @@ const ContactView: React.FC<ContactViewProps> = ({ setView }) => {
                      <div>
                        <div className="text-[11px] font-black text-[#002147] uppercase tracking-tight">Office Location</div>
                        <p className="text-sm font-bold text-slate-600">
-                         31134 Hildesheim<br />
-                         Lower Saxony, Germany
+                         Lucienvörder Str. 9, 31134 Hildesheim,<br />
+                         Niedersachsen, Germany
                        </p>
                      </div>
                    </div>
@@ -185,7 +185,7 @@ const ContactView: React.FC<ContactViewProps> = ({ setView }) => {
             ></iframe>
           </div>
           <div className="mt-8 text-center">
-            <p className="font-extrabold text-[#002147] uppercase text-sm tracking-tight mb-2">31134 Hildesheim, Germany</p>
+            <p className="font-extrabold text-[#002147] uppercase text-sm tracking-tight mb-2">Lucienvörder Str. 9, 31134 Hildesheim, Niedersachsen, Germany</p>
             <p className="text-[10px] font-bold uppercase tracking-widest max-w-lg mx-auto px-4 text-slate-500">Available for remote services worldwide (VRI/OPI) and on-site assignments across Germany, the EU/EEA & Switzerland.</p>
           </div>
         </div>

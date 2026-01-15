@@ -9,10 +9,6 @@ import AboutView from './views/AboutView';
 import ServicesView from './views/ServicesView';
 import ClientsView from './views/ClientsView';
 import ContactView from './views/ContactView';
-import DashboardView from './views/DashboardView';
-import ChatView from './views/ChatView';
-import StudioView from './views/StudioView';
-import LiveView from './views/LiveView';
 
 const App: React.FC = () => {
   const [currentView, setCurrentView] = useState<View>(View.HOME);
@@ -37,10 +33,6 @@ const App: React.FC = () => {
       case View.SERVICES: return <ServicesView targetSection={targetSection} clearTarget={() => setTargetSection(null)} setView={(v) => navigate(v)} />;
       case View.CLIENTS: return <ClientsView setView={(v) => navigate(v)} />;
       case View.CONTACT: return <ContactView setView={(v) => navigate(v)} />;
-      case View.DASHBOARD: return <DashboardView onNavigate={(v) => navigate(v)} />;
-      case View.CHAT: return <ChatView />;
-      case View.STUDIO: return <StudioView />;
-      case View.LIVE: return <LiveView />;
       default: return <HomeView onNavigate={navigate} />;
     }
   };

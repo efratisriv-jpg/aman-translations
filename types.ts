@@ -1,4 +1,5 @@
 
+// View enum for application routing, including new AI dashboard modules
 export enum View {
   HOME = 'home',
   ABOUT = 'about',
@@ -11,6 +12,7 @@ export enum View {
   LIVE = 'live'
 }
 
+// Interface for managing chat message history
 export interface Message {
   id: string;
   role: 'user' | 'model';
@@ -18,6 +20,7 @@ export interface Message {
   timestamp: Date;
 }
 
+// Interface for images generated within the Creative Studio
 export interface GeneratedImage {
   id: string;
   url: string;
