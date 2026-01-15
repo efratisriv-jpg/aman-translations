@@ -13,7 +13,7 @@ const ContactView: React.FC<ContactViewProps> = ({ setView }) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     setIsSubmitting(true);
-    // FormSubmit logic is handled via action, this provides immediate UI feedback
+    // FormSubmit logic is handled via hidden iframe target, this provides UI feedback
     setTimeout(() => {
       setFormSubmitted(true);
       setIsSubmitting(false);
@@ -64,16 +64,16 @@ const ContactView: React.FC<ContactViewProps> = ({ setView }) => {
                      </div>
                      <div>
                        <div className="text-[11px] font-black text-[#002147] uppercase tracking-tight">Email</div>
-                       <a href="mailto:efratisriv@gmail.com" className="text-sm font-bold text-slate-600 hover:text-[#00A3E0]">efratisriv@gmail.com</a>
+                       <a href="mailto:contact@amantranslations.com" className="text-sm font-bold text-slate-600 hover:text-[#00A3E0]">contact@amantranslations.com</a>
                      </div>
                    </div>
                    <div className="flex items-start gap-4">
                      <div className="w-10 h-10 bg-slate-50 border border-slate-100 rounded flex items-center justify-center shrink-0">
-                       <Phone className="w-5 h-5 text-[#002147]" />
+                       <Phone className="w-5 h-5 text-emerald-500" />
                      </div>
                      <div>
                        <div className="text-[11px] font-black text-[#002147] uppercase tracking-tight">Phone / WhatsApp</div>
-                       <a href="tel:+491785260768" className="text-sm font-bold text-slate-600 hover:text-[#00A3E0]">+49 178 5260768</a>
+                       <a href="https://wa.me/4915560029057" className="text-sm font-bold text-slate-600 hover:text-[#00A3E0]">+49 155 60029057</a>
                      </div>
                    </div>
                    <div className="flex items-start gap-4">
@@ -94,8 +94,8 @@ const ContactView: React.FC<ContactViewProps> = ({ setView }) => {
                <div>
                  <h3 className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-6">Working Hours</h3>
                  <div className="p-6 bg-slate-50 border border-slate-100 rounded">
-                   <div className="text-sm font-extrabold text-[#002147] mb-1 uppercase tracking-tight">Monday – Friday</div>
-                   <div className="text-xl font-black text-[#00A3E0] mb-4 tracking-tighter">09:00 – 18:00 (CET)</div>
+                   <div className="text-sm font-extrabold text-[#002147] mb-1 uppercase tracking-tight">Monday – Saturday</div>
+                   <div className="text-xl font-black text-[#00A3E0] mb-4 tracking-tighter">08:00 – 18:00 (CET)</div>
                    <p className="text-[10px] font-bold text-slate-400 leading-relaxed uppercase tracking-widest italic">
                      Outside these hours, urgent requests may be handled subject to availability.
                    </p>
@@ -111,9 +111,9 @@ const ContactView: React.FC<ContactViewProps> = ({ setView }) => {
                   <div className="w-20 h-20 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-8 shadow-inner">
                     <CheckCircle2 className="w-10 h-10" />
                   </div>
-                  <h2 className="text-2xl font-extrabold text-[#002147] uppercase tracking-tight">Transmission Received</h2>
+                  <h2 className="text-2xl font-extrabold text-[#002147] uppercase tracking-tight">Message Delivered</h2>
                   <p className="text-slate-500 leading-relaxed max-w-xs mx-auto text-sm font-medium">
-                    Thank you for your message. I will get back to you shortly.
+                    Thank you for your inquiry. Your message has been successfully sent to efratisriv@gmail.com.
                   </p>
                   <button onClick={() => setFormSubmitted(false)} className="mt-12 text-[10px] font-black uppercase tracking-widest text-[#00A3E0] hover:text-[#002147]">New Inquiry</button>
                 </div>
@@ -212,7 +212,7 @@ const ContactView: React.FC<ContactViewProps> = ({ setView }) => {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <button onClick={() => setView(View.CONTACT)} className="btn-primary bg-white text-[#002147]">Request a Quote</button>
-            <a href="https://wa.me/491785260768" className="btn-whatsapp bg-transparent text-white border-white/20">WhatsApp Call</a>
+            <a href="https://wa.me/4915560029057" className="btn-whatsapp bg-transparent text-white border-white/20 hover:bg-white/5">WhatsApp Call</a>
           </div>
         </div>
       </section>

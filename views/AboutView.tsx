@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { View } from '../types';
-import { Award, ShieldCheck, Heart, User, MapPin, Briefcase, GraduationCap } from 'lucide-react';
+import { Award, ShieldCheck, Heart, User, MapPin, Briefcase, GraduationCap, ExternalLink, FileText } from 'lucide-react';
 
 interface AboutViewProps {
   setView: (view: View) => void;
@@ -58,6 +58,33 @@ const AboutView: React.FC<AboutViewProps> = ({ setView }) => {
               <p>
                 Today, my practice is a trusted resource for courts, public institutions, healthcare providers, migration authorities, and more than 40 leading language service providers globally.
               </p>
+
+              <div className="pt-8 flex flex-wrap gap-4">
+                <a 
+                  href="https://www.proz.com/profile/3696797" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-[#002147] text-white px-6 py-3 rounded text-[10px] font-black uppercase tracking-widest hover:bg-[#00A3E0] transition-colors"
+                >
+                  <ExternalLink className="w-4 h-4" /> View ProZ Profile
+                </a>
+                <a 
+                  href="https://www.iapti.org/member/aman-desbele-baryahannes/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-[#00A3E0] text-white px-6 py-3 rounded text-[10px] font-black uppercase tracking-widest hover:bg-[#002147] transition-colors"
+                >
+                  <ExternalLink className="w-4 h-4" /> View IAPTI Profile
+                </a>
+                <a 
+                  href="https://www.proz.com/profile_resources/3696797_r68a6e7c1eb024.pdf" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 border border-[#002147] text-[#002147] px-6 py-3 rounded text-[10px] font-black uppercase tracking-widest hover:bg-slate-50 transition-colors"
+                >
+                  <FileText className="w-4 h-4" /> Download PDF CV
+                </a>
+              </div>
             </div>
           </div>
           <div className="lg:col-span-4">

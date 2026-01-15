@@ -372,7 +372,7 @@ const ServicesView: React.FC<ServicesViewProps> = ({ targetSection, clearTarget,
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <button onClick={() => setView(View.CONTACT)} className="btn-primary bg-white text-[#002147]">Request a Quote</button>
-            <a href="https://wa.me/491785260768" className="btn-whatsapp bg-transparent text-white border-white/20 hover:bg-white/5">WhatsApp Call</a>
+            <a href="https://wa.me/4915560029057" className="btn-whatsapp bg-transparent text-white border-white/20 hover:bg-white/5">WhatsApp Call</a>
           </div>
         </div>
       </section>

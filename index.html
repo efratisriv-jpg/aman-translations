@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="scroll-behavior: smooth;">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,6 +21,7 @@
         color: #1E293B;
         background-color: white;
         line-height: 1.6;
+        -webkit-overflow-scrolling: touch;
       }
       
       h1, h2, h3, h4, h5, h6, .nav-link, .btn-primary, .btn-whatsapp, .logo-text {
@@ -33,10 +34,9 @@
       .text-azure { color: var(--azure); }
       .bg-charcoal { background-color: var(--charcoal); }
       
-      /* Design Rules: No animations, no gradients, no flashing elements */
-      * {
-        transition: none !important;
-        animation: none !important;
+      /* Smooth transitions for a momentum-like premium feel without flashy animations */
+      .nav-link, .btn-primary, .btn-whatsapp, button, a {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       }
 
       .btn-primary {

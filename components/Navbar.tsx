@@ -85,7 +85,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentView, onNavigate }) => {
 
       <div className="flex items-center gap-4">
         <a 
-          href="https://wa.me/491785260768"
+          href="https://wa.me/4915560029057"
           className="hidden md:flex items-center gap-2 text-[10px] font-bold text-slate-600 uppercase tracking-widest nav-link"
         >
           <div className="w-8 h-8 rounded-full border border-slate-100 flex items-center justify-center">

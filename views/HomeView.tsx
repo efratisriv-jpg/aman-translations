@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { View } from '../types';
-import { CheckCircle, Phone, Globe, ArrowRight, Award, MapPin, Briefcase } from 'lucide-react';
+import { CheckCircle, Phone, Globe, ArrowRight, Award, MapPin, Briefcase, CheckCircle2, Loader2 } from 'lucide-react';
 
 interface HomeViewProps {
   onNavigate: (view: View, section?: string) => void;
@@ -10,6 +10,8 @@ interface HomeViewProps {
 const HomeView: React.FC<HomeViewProps> = ({ onNavigate }) => {
   const [email, setEmail] = useState('');
   const [emailError, setEmailError] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   const validateEmail = (value: string) => {
     setEmail(value);
@@ -21,8 +23,19 @@ const HomeView: React.FC<HomeViewProps> = ({ onNavigate }) => {
     }
   };
 
+  const handleHeroSubmit = (e: React.FormEvent) => {
+    setIsSubmitting(true);
+    // Logic for UI feedback, form submission is handled via iframe target
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setSubmitted(true);
+    }, 1500);
+  };
+
   return (
     <div className="flex flex-col">
+      <iframe name="hidden_iframe_home" id="hidden_iframe_home" style={{ display: 'none' }}></iframe>
+      
       {/* Announcement Bar */}
       <div className="bg-[#002147] text-white text-[10px] font-bold uppercase tracking-[0.3em] py-4 text-center border-b border-white/10 nav-link">
         Trusted by Courts, Institutions & 40+ Language Service Providers Worldwide
@@ -55,7 +68,7 @@ const HomeView: React.FC<HomeViewProps> = ({ onNavigate }) => {
               <button onClick={() => onNavigate(View.CONTACT)} className="btn-primary bg-[#00A3E0] hover:bg-[#0082b3]">
                 Request a Quote
               </button>
-              <a href="https://wa.me/491785260768" className="btn-whatsapp bg-white/10 border-white/20 text-white hover:bg-white/20">
+              <a href="https://wa.me/4915560029057" className="btn-whatsapp bg-white/10 border-white/20 text-white hover:bg-white/20">
                 <Phone className="w-4 h-4 text-emerald-400" /> WhatsApp Call
               </a>
             </div>
@@ -68,48 +81,69 @@ const HomeView: React.FC<HomeViewProps> = ({ onNavigate }) => {
           {/* Quick Contact Form */}
           <div className="w-full max-w-md mx-auto lg:ml-auto">
             <div className="bg-white/90 backdrop-blur-md p-8 rounded-2xl border border-white/20 shadow-2xl">
-              <h3 className="text-xl font-black text-[#002147] mb-8 uppercase tracking-tight">Have a question? Get your quote in 45 mins</h3>
-              <form action="https://formsubmit.co/efratisriv@gmail.com" method="POST" className="space-y-6">
-                <input 
-                  type="text" 
-                  name="name" 
-                  placeholder="Name" 
-                  required 
-                  className="w-full bg-white/80 border border-slate-200 p-4 rounded text-sm text-[#002147] placeholder:text-slate-400 focus:border-[#00A3E0] outline-none shadow-sm" 
-                />
-                <div className="space-y-1">
-                  <input 
-                    type="email" 
-                    name="email" 
-                    placeholder="Email" 
-                    value={email}
-                    onChange={(e) => validateEmail(e.target.value)}
-                    required 
-                    className={`w-full bg-white/80 border ${emailError ? 'border-red-500' : 'border-slate-200'} p-4 rounded text-sm text-[#002147] placeholder:text-slate-400 focus:border-[#00A3E0] outline-none shadow-sm`} 
-                  />
-                  {emailError && <p className="text-[10px] text-red-500 font-bold uppercase tracking-wider">{emailError}</p>}
+              {submitted ? (
+                <div className="py-12 text-center">
+                  <div className="w-16 h-16 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <CheckCircle2 className="w-8 h-8" />
+                  </div>
+                  <h3 className="text-xl font-black text-[#002147] mb-4 uppercase tracking-tight">Message Delivered</h3>
+                  <p className="text-slate-600 text-sm font-medium">Thank you. Your request has been sent to Aman directly.</p>
+                  <button onClick={() => setSubmitted(false)} className="mt-8 text-[10px] font-black uppercase tracking-widest text-[#00A3E0]">Send another enquiry</button>
                 </div>
-                <input 
-                  type="tel" 
-                  name="phone" 
-                  placeholder="Phone (Optional)" 
-                  className="w-full bg-white/80 border border-slate-200 p-4 rounded text-sm text-[#002147] placeholder:text-slate-400 focus:border-[#00A3E0] outline-none shadow-sm" 
-                />
-                <textarea 
-                  name="message" 
-                  placeholder="Message" 
-                  rows={3} 
-                  required 
-                  className="w-full bg-white/80 border border-slate-200 p-4 rounded text-sm text-[#002147] placeholder:text-slate-400 focus:border-[#00A3E0] outline-none resize-none shadow-sm" 
-                />
-                <button 
-                  type="submit" 
-                  disabled={!!emailError}
-                  className="w-full btn-primary bg-[#002147] hover:bg-slate-800 justify-center py-4 text-center disabled:opacity-50"
-                >
-                  Send Request
-                </button>
-              </form>
+              ) : (
+                <>
+                  <h3 className="text-xl font-black text-[#002147] mb-8 uppercase tracking-tight">Have a question? Get your quote in 45 mins</h3>
+                  <form 
+                    action="https://formsubmit.co/efratisriv@gmail.com" 
+                    method="POST" 
+                    target="hidden_iframe_home"
+                    onSubmit={handleHeroSubmit}
+                    className="space-y-6"
+                  >
+                    <input type="hidden" name="_captcha" value="false" />
+                    <input 
+                      type="text" 
+                      name="name" 
+                      placeholder="Name" 
+                      required 
+                      className="w-full bg-white/80 border border-slate-200 p-4 rounded text-sm text-[#002147] placeholder:text-slate-400 focus:border-[#00A3E0] outline-none shadow-sm" 
+                    />
+                    <div className="space-y-1">
+                      <input 
+                        type="email" 
+                        name="email" 
+                        placeholder="Email" 
+                        value={email}
+                        onChange={(e) => validateEmail(e.target.value)}
+                        required 
+                        className={`w-full bg-white/80 border ${emailError ? 'border-red-500' : 'border-slate-200'} p-4 rounded text-sm text-[#002147] placeholder:text-slate-400 focus:border-[#00A3E0] outline-none shadow-sm`} 
+                      />
+                      {emailError && <p className="text-[10px] text-red-500 font-bold uppercase tracking-wider">{emailError}</p>}
+                    </div>
+                    <input 
+                      type="tel" 
+                      name="phone" 
+                      placeholder="Phone (Optional)" 
+                      className="w-full bg-white/80 border border-slate-200 p-4 rounded text-sm text-[#002147] placeholder:text-slate-400 focus:border-[#00A3E0] outline-none shadow-sm" 
+                    />
+                    <textarea 
+                      name="message" 
+                      placeholder="Message" 
+                      rows={3} 
+                      required 
+                      className="w-full bg-white/80 border border-slate-200 p-4 rounded text-sm text-[#002147] placeholder:text-slate-400 focus:border-[#00A3E0] outline-none resize-none shadow-sm" 
+                    />
+                    <button 
+                      type="submit" 
+                      disabled={!!emailError || isSubmitting}
+                      className="w-full btn-primary bg-[#002147] hover:bg-slate-800 justify-center py-4 text-center disabled:opacity-50"
+                    >
+                      {isSubmitting ? <Loader2 className="w-5 h-5 animate-spin mr-2" /> : null}
+                      {isSubmitting ? 'Sending...' : 'Send Request'}
+                    </button>
+                  </form>
+                </>
+              )}
             </div>
           </div>
         </div>
@@ -325,7 +359,7 @@ const HomeView: React.FC<HomeViewProps> = ({ onNavigate }) => {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <button onClick={() => onNavigate(View.CONTACT)} className="btn-primary">Request a Quote</button>
-            <a href="https://wa.me/491785260768" className="btn-whatsapp">WhatsApp Call</a>
+            <a href="https://wa.me/4915560029057" className="btn-whatsapp">WhatsApp Call</a>
           </div>
         </div>
       </section>

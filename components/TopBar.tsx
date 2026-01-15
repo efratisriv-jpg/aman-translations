@@ -18,13 +18,13 @@ const TopBar: React.FC = () => {
           <MapPin className="w-3 h-3 text-[#00A3E0]" />
           Hildesheim, Germany · EU/EEA & Switzerland (On-site)
         </span>
-        <a href="https://wa.me/491785260768" className="flex items-center gap-2 hover:text-white">
+        <a href="https://wa.me/4915560029057" className="flex items-center gap-2 hover:text-white">
           <Phone className="w-3 h-3 text-[#00A3E0]" />
-          WhatsApp: +49 178 5260768
+          WhatsApp: +49 155 60029057
         </a>
-        <a href="mailto:efratisriv@gmail.com" className="flex items-center gap-2 hover:text-white">
+        <a href="mailto:contact@amantranslations.com" className="flex items-center gap-2 hover:text-white">
           <Mail className="w-3 h-3 text-[#00A3E0]" />
-          efratisriv@gmail.com
+          contact@amantranslations.com
         </a>
       </div>
     </div>

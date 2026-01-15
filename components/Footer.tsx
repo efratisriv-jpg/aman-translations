@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { View } from '../types';
-import { Mail, Phone, MapPin, ExternalLink } from 'lucide-react';
+import { Mail, Phone, MapPin, ExternalLink, FileText } from 'lucide-react';
 
 interface FooterProps {
   setView: (view: View) => void;
@@ -56,8 +56,13 @@ const Footer: React.FC<FooterProps> = ({ setView }) => {
               </a>
             </li>
             <li>
-              <a href="https://www.iapti.org/" target="_blank" rel="noopener noreferrer" className="text-[10px] uppercase font-bold tracking-[0.2em] flex items-center gap-2 hover:text-white nav-link">
-                IAPTI Member <ExternalLink className="w-3 h-3" />
+              <a href="https://www.iapti.org/member/aman-desbele-baryahannes/" target="_blank" rel="noopener noreferrer" className="text-[10px] uppercase font-bold tracking-[0.2em] flex items-center gap-2 hover:text-white nav-link">
+                IAPTI Profile <ExternalLink className="w-3 h-3" />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.proz.com/profile_resources/3696797_r68a6e7c1eb024.pdf" target="_blank" rel="noopener noreferrer" className="text-[10px] uppercase font-bold tracking-[0.2em] flex items-center gap-2 hover:text-white nav-link">
+                Download CV (PDF) <FileText className="w-3 h-3" />
               </a>
             </li>
           </ul>
@@ -76,12 +81,12 @@ const Footer: React.FC<FooterProps> = ({ setView }) => {
                 31134 Hildesheim, Germany
               </span>
             </div>
-            <div className="flex items-center gap-3"><Phone className="w-4 h-4 text-emerald-500" /> WhatsApp: +49 178 5260768</div>
-            <div className="flex items-center gap-3"><Mail className="w-4 h-4 text-[#00A3E0]" /> efratisriv@gmail.com</div>
+            <div className="flex items-center gap-3"><Phone className="w-4 h-4 text-emerald-500" /> WhatsApp: +49 155 60029057</div>
+            <div className="flex items-center gap-3"><Mail className="w-4 h-4 text-[#00A3E0]" /> contact@amantranslations.com</div>
           </div>
           <div className="pt-8 border-t border-white/5">
             <div className="text-[8px] font-black text-white/30 uppercase tracking-[0.4em] mb-3 nav-link">Availability:</div>
-            <p className="text-[10px] font-bold uppercase tracking-widest nav-link">Monday–Friday · Central European Time (CET)</p>
+            <p className="text-[10px] font-bold uppercase tracking-widest nav-link">Monday–Saturday · 08:00–18:00 (CET)</p>
           </div>
         </div>
       </div>
