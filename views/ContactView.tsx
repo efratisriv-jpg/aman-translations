@@ -113,13 +113,13 @@ const ContactView: React.FC<ContactViewProps> = ({ setView }) => {
                   </div>
                   <h2 className="text-2xl font-extrabold text-[#002147] uppercase tracking-tight">Message Delivered</h2>
                   <p className="text-slate-500 leading-relaxed max-w-xs mx-auto text-sm font-medium">
-                    Thank you for your inquiry. Your message has been successfully sent to efratisriv@gmail.com.
+                    Thank you for your inquiry. Your message has been successfully sent to contact@amantranslations.com.
                   </p>
                   <button onClick={() => setFormSubmitted(false)} className="mt-12 text-[10px] font-black uppercase tracking-widest text-[#00A3E0] hover:text-[#002147]">New Inquiry</button>
                 </div>
               ) : (
                 <form 
-                  action="https://formsubmit.co/efratisriv@gmail.com" 
+                  action="https://formsubmit.co/contact@amantranslations.com" 
                   method="POST" 
                   target="hidden_iframe_contact"
                   onSubmit={handleSubmit}

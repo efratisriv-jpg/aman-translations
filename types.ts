@@ -9,7 +9,9 @@ export enum View {
   DASHBOARD = 'dashboard',
   CHAT = 'chat',
   STUDIO = 'studio',
-  LIVE = 'live'
+  LIVE = 'live',
+  PRIVACY = 'privacy',
+  IMPRINT = 'imprint'
 }
 
 // Interface for managing chat message history

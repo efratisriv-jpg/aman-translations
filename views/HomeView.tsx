@@ -1,12 +1,9 @@
+
 import React, { useState } from 'react';
 import { View } from '../types';
 import { CheckCircle, Phone, Globe, ArrowRight, Award, MapPin, Briefcase, CheckCircle2 } from 'lucide-react';
 
 const PROFILE_IMAGE = "https://lh3.googleusercontent.com/d/1XOpSX2Q8hoSI_jIqRunng17nvIlzRIpJ";
-
-interface HomeViewProps {
-  onNavigate: (view: View, section?: string) => void;
-}
 
 const LogoItem: React.FC<{ src: string; label: string }> = ({ src, label }) => {
   const [error, setError] = useState(false);
@@ -42,6 +39,11 @@ const LogoItem: React.FC<{ src: string; label: string }> = ({ src, label }) => {
     </div>
   );
 };
+
+// Define the missing HomeViewProps interface
+interface HomeViewProps {
+  onNavigate: (view: View, section?: string) => void;
+}
 
 const HomeView: React.FC<HomeViewProps> = ({ onNavigate }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -209,7 +211,7 @@ const HomeView: React.FC<HomeViewProps> = ({ onNavigate }) => {
                     Have a question? Get your quote in 45 mins
                   </h3>
                   <form 
-                    action="https://formsubmit.co/efratisriv@gmail.com" 
+                    action="https://formsubmit.co/contact@amantranslations.com" 
                     method="POST" 
                     target="hidden_iframe_home"
                     onSubmit={handleHeroSubmit}
@@ -287,7 +289,7 @@ const HomeView: React.FC<HomeViewProps> = ({ onNavigate }) => {
               <h2 className="text-xs font-black uppercase tracking-[0.4em] text-[#00A3E0] mb-4 nav-link">About me</h2>
               <h3 className="text-4xl font-black text-[#002147] mb-8 leading-tight tracking-tight">Aman Baryahannes</h3>
               <p className="text-lg text-slate-600 mb-10 leading-relaxed font-normal">
-                I am a professional interpreter and translator specialising in Tigrinya and Amharic. My career is defined by a deep commitment to linguistic precision in high-stakes environments.
+                I am a professional interpreter and translator specializing in <span className="font-bold text-[#002147]">English</span>, <span className="font-bold text-[#002147]">Tigrinya</span>, and <span className="font-bold text-[#002147]">Amharic</span>. I am a native speaker of both <span className="font-bold text-[#002147]">Tigrinya</span> and <span className="font-bold text-[#002147]">Amharic</span>, providing specialized linguistic services in my core areas: legal, medical, and institutional sectors. My career is defined by a deep commitment to linguistic precision in high-stakes environments.
               </p>
             </div>
 
@@ -462,7 +464,7 @@ const HomeView: React.FC<HomeViewProps> = ({ onNavigate }) => {
 
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
           {[
-            "OVER 10 YEARS OF REAL-WORLD PROFESSIONAL EXPERIENCE",
+            "OVER A DECADE OF REAL-WORLD PROFESSIONAL EXPERIENCE",
             "SPECIALIST EXPERTISE IN HIGH-RISK LANGUAGE CONTEXTS",
             "PROVEN RELIABILITY WITH COURTS, INSTITUTIONS AND AGENCIES",
             "STRONG ETHICAL AWARENESS AND RESPONSIBILITY",
