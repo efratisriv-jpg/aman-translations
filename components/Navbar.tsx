@@ -11,13 +11,12 @@ const Navbar: React.FC<NavbarProps> = ({ currentView, onNavigate }) => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  // Labels updated with spaces around the '&' as requested: "Interpretation and Translation: Sector & Sector"
   const servicesLinks = [
-    { label: 'Interpretation', hash: 'interpreting' },
-    { label: 'Translation', hash: 'translation' },
-    { label: 'Legal & Judicial', hash: 'legal' },
-    { label: 'Medical & Healthcare', hash: 'medical' },
-    { label: 'Immigration & Asylum', hash: 'immigration' },
-    { label: 'Educational & Social', hash: 'educational' },
+    { label: 'Interpretation and Translation: Legal & Judicial', hash: 'legal' },
+    { label: 'Interpretation and Translation: Medical & Healthcare', hash: 'medical' },
+    { label: 'Interpretation and Translation: Immigration & Asylum', hash: 'immigration' },
+    { label: 'Interpretation and Translation: Education & Social', hash: 'educational' },
   ];
 
   const handleNav = (view: View, section?: string) => {
@@ -66,12 +65,12 @@ const Navbar: React.FC<NavbarProps> = ({ currentView, onNavigate }) => {
               Services <ChevronDown className="w-3 h-3" />
             </button>
             {showDropdown && (
-              <div className="absolute top-full left-0 w-64 bg-white border border-slate-100 shadow-xl py-2 flex flex-col z-50">
+              <div className="absolute top-full left-0 w-96 bg-white border border-slate-100 shadow-xl py-2 flex flex-col z-50">
                 {servicesLinks.map(link => (
                   <button
                     key={link.label}
                     onClick={() => handleNav(View.SERVICES, link.hash)}
-                    className="px-6 py-3 text-[10px] font-bold uppercase tracking-widest text-slate-500 hover:bg-slate-50 hover:text-[#002147] text-left"
+                    className="px-6 py-3 text-[10px] font-bold uppercase tracking-widest text-slate-500 hover:bg-slate-50 hover:text-[#002147] text-left leading-relaxed transition-colors"
                   >
                     {link.label}
                   </button>
@@ -147,7 +146,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentView, onNavigate }) => {
                   <button
                     key={link.label}
                     onClick={() => handleNav(View.SERVICES, link.hash)}
-                    className="w-full text-left py-3 px-4 text-[11px] font-bold uppercase tracking-widest text-slate-500 hover:bg-slate-50 rounded-lg"
+                    className="w-full text-left py-3 px-4 text-[11px] font-bold uppercase tracking-widest text-slate-500 hover:bg-slate-50 rounded-lg leading-relaxed"
                   >
                     {link.label}
                   </button>

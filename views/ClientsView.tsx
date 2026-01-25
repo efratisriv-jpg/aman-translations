@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { View } from '../types';
 import { Quote, Star, CheckCircle } from 'lucide-react';
@@ -11,66 +10,84 @@ const ClientsView: React.FC<ClientsViewProps> = ({ setView }) => {
   const categories = [
     {
       title: 'Legal & Arbitration Clients',
-      subtitle: '(Small and mid-size legal practices, arbitration teams, consular service providers)',
+      subtitle: '(Direct contracts, legal practices, arbitration teams, consular services)',
       clients: [
-        'Harrison & Cole Solicitors (UK) — Immigration & Asylum Law',
-        'Redbridge Chambers Legal Consultants (UK) — Criminal & Civil Law',
-        'Oakfield Immigration Law Office (UK) — Immigration & Protection',
-        'Westminster Legal Advisory Services (UK) — Public Law',
-        'Northbridge Solicitors LLP (UK) — Family & Child Law',
-        'Crownstone Legal Associates (UK) — Litigation Support',
-        'LexNova Arbitration Consultants (Netherlands) — Investment Arbitration',
-        'Hague Arbitration Support Services (Netherlands) — International Arbitration',
-        'International Investment Arbitration Case Teams (The Hague, Netherlands)',
-        'Consular Visa Support Offices (International) — Legal & Administrative'
+        'KATA Group (contract)',
+        'DACBeachcroft (contract)',
+        'Cairn Legal (legal support)',
+        'Theunissen Law Firm (legal support)',
+        'Downtown Legal Services (legal support)',
+        'Beacon Law Group (legal support)',
+        'Fisher & Co Solicitors (legal support)',
+        'Wilsons Solicitors (legal support)',
+        'International investment arbitration case teams (The Hague, Netherlands)',
+        'Consular visa support offices (international) — legal & administrative'
       ]
     },
     {
       title: 'Medical & Healthcare Clients',
-      subtitle: '(Clinics, assessment centres, mental health providers)',
+      subtitle: '(Clinics, health authorities, medical assessment centres)',
       clients: [
-        'Riverside Medical Practice (UK) — Primary Care',
-        'Greenhill Community Health Clinic (UK) — Community Medicine',
-        'Northway Mental Health Services (UK) — Mental Health',
-        'Clearview Psychological Assessment Centre (UK) — Psychological Assessments',
-        'Oakwood Medical Assessment Services (UK) — Medical Reporting',
-        'BridgeCare Community Health Services (UK) — Public Health',
-        'WellPath Clinical Services (Ireland) — Medical Assessments',
-        'MindWell Psychological Services (Ireland) — Mental Health',
-        'CrossCare Medical Assessments (Ireland) — Medical & Psychiatric Reporting',
-        'Independent Medical Reporting Providers (International) — Clinical Documentation'
+        'Medreview (medical)',
+        'Fraser health',
+        'St. John\'s Hospice (medical)',
+        'Clinique Saint-Jean (medical)',
+        'Clinique Privée Dr. Bohler (medical)',
+        'Bridgepoint Active Healthcare (medical)',
+        'Fenway Health (medical)',
+        'Community Health Center of Cape Cod (medical)',
+        'Mildmay Hospital (medical)',
+        'Sherbourne Health (medical)',
+        'Clearview psychological assessment centre (psychological assessments)',
+        'Oakwood medical assessment services (medical reporting)',
+        'BridgeCare community health services (public health)',
+        'Independent medical reporting providers (clinical documentation)'
       ]
     },
     {
-      title: 'Immigration, Asylum & Social Support Organisations',
-      subtitle: '(NGOs, interview support services, casework providers)',
+      title: 'Corporate & Commercial Clients',
+      subtitle: '(Direct business contracts and commercial entities)',
       clients: [
-        'Asylum Interview Support Services Ltd (UK) — Asylum Procedures',
-        'Refugee Casework Support Network (UK) — Protection & Appeals',
-        'Migration Advice Network (Ireland) — Immigration Advisory',
-        'International Protection Interview Services (Ireland) — Asylum Interviews',
-        'Reception & Processing Support Services (International) — Migration Procedures',
-        'Community Integration Support Services (International) — Social Services'
+        'GT World of Beauty GmbH'
       ]
     },
     {
       title: 'Language Service Providers',
-      subtitle: '(Translation & Interpreting Agencies)',
+      subtitle: '(Professional Translation & Interpreting Agencies)',
       clients: [
-        'Lionbridge — Legal & Arbitration',
-        'TransPerfect — Legal & Medical',
-        'RWS Group — Legal & Medical',
-        'LanguageLine Solutions — Medical (OPI/VRI)',
-        'Acolad Group — Legal & Medical',
-        'Welocalize — Legal',
-        'STAR Group — Legal & Medical',
-        'Capita Translation & Interpreting — Public Services',
-        'Word360 — Legal',
-        'Semantix — Legal & Medical',
-        'Global Lingo — Legal',
-        'Alpha CRC — Legal & Medical',
-        'Straker Translations — Medical',
-        'TextMaster — Institutional Translation'
+        'Lionbridge',
+        'Alpha CRC',
+        'Swisstranslate',
+        'BURG Translation',
+        'Idiomatic Translations',
+        'Toppan Digital Language Ltd',
+        'Kajf Translation',
+        'Transand',
+        'Untranslate',
+        'Absolute Translations Ltd',
+        'Knockhundred Translations Ltd',
+        'Dialektikus Plus KIG',
+        'Polyglot tulkojumi',
+        'MPS Globalisation Services',
+        'Bond Enterprise Language Services',
+        'Innovative Humans Limited',
+        'EN Translation',
+        'Dray Translations Ltd',
+        'RixTrans Translation Services',
+        'Nations Translation Group',
+        'Simpson Soft UK',
+        'RFSL Stockholm',
+        'Language Power International AS',
+        'Stepes Translation Services',
+        'INGCO International',
+        'Boostlingo',
+        'Total Language',
+        'Be Moore Interpreting Services',
+        'Semantix',
+        'Originalarn – translations & DTP',
+        'Global Voices Ltd',
+        'A2Z Language Hub',
+        'Smartlingo'
       ]
     }
   ];
@@ -112,11 +129,11 @@ const ClientsView: React.FC<ClientsViewProps> = ({ setView }) => {
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-black text-white mb-8 leading-tight tracking-tight">
+          <h1 className="text-4xl md:text-6xl font-black text-white mb-8 leading-tight tracking-tight uppercase">
             Institutional Trust & Partnerships
           </h1>
           <p className="text-xl text-slate-200 leading-relaxed font-normal">
-            A proven track record with law offices, healthcare providers, and global language service providers. Delivering <span className="text-[#00A3E0] font-bold">accuracy without compromise</span> across Tigrinya and Amharic.
+            A proven track record with law offices, healthcare providers, and global language service providers. Delivering <span className="text-[#00A3E0] font-bold">accuracy without compromise</span> across Tigrinya, Amharic, and English.
           </p>
         </div>
       </section>
@@ -134,7 +151,7 @@ const ClientsView: React.FC<ClientsViewProps> = ({ setView }) => {
                 {cat.clients.map(client => (
                   <div key={client} className="p-6 bg-slate-50 border border-slate-100 rounded flex items-start gap-4 transition-colors hover:border-slate-200">
                     <div className="w-1.5 h-1.5 rounded-full bg-[#00A3E0] mt-2 shrink-0"></div>
-                    <span className="text-[11px] font-bold text-slate-600 leading-relaxed uppercase tracking-[0.05em] nav-link">{client}</span>
+                    <span className="text-[13px] font-bold text-slate-600 leading-relaxed tracking-tight">{client}</span>
                   </div>
                 ))}
               </div>
