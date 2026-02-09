@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { View } from '../types';
 import { CheckCircle, Phone, Globe, ArrowRight, Award, MapPin, Briefcase, CheckCircle2 } from 'lucide-react';
@@ -109,9 +108,8 @@ const HomeView: React.FC<HomeViewProps> = ({ onNavigate }) => {
       items: [
         "Legal, Judicial & Forensic Documents",
         "Contracts & Commercial Agreements",
-        "Affidavits & Sworn Witness Statements",
+        "Affidavits & Witness Statements",
         "Court Orders & Judicial Summons",
-        "Power of Attorney & Notarial Acts",
         "Intellectual Property & Patent Filings"
       ]
     },
@@ -417,6 +415,8 @@ const HomeView: React.FC<HomeViewProps> = ({ onNavigate }) => {
             <LogoItem src="https://lh3.googleusercontent.com/d/1S-vN3J_6wR9T7H9F_wN0O-69V0_9_6k9" label="City of Hildesheim" />
             <LogoItem src="https://lh3.googleusercontent.com/d/1Neuchatel-Logo-Placeholder" label="Canton of Neuchâtel" />
             <LogoItem src="https://lh3.googleusercontent.com/d/1EthEmb-Logo-Placeholder" label="Ethiopian Embassy, Asmara" />
+            <LogoItem src="https://lh3.googleusercontent.com/d/1ATA-Logo-Placeholder" label="ATA - American Translators Association" />
+            <LogoItem src="https://lh3.googleusercontent.com/d/1Edinburgh-Logo-Placeholder" label="The University of Edinburgh" />
           </div>
         </div>
       </section>

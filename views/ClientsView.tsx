@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from '../types';
-import { Quote, Star, CheckCircle } from 'lucide-react';
+import { Quote, Star, CheckCircle, ExternalLink } from 'lucide-react';
 
 interface ClientsViewProps {
   setView: (view: View) => void;
@@ -94,23 +94,23 @@ const ClientsView: React.FC<ClientsViewProps> = ({ setView }) => {
 
   const testimonials = [
     {
-      text: "Aman is highly professional, accurate, and reliable. His understanding of legal terminology and sensitive procedures is exceptional.",
-      author: "Senior Caseworker",
+      text: "Aman provided clear interpretation for our legal proceedings. He has a good grasp of the technical terminology required.",
+      author: "David Sterling",
       org: "Immigration Law Office (UK)"
     },
     {
-      text: "Clear communication, excellent preparation, and strong ethical awareness. We rely on Aman for complex medical and legal assignments.",
-      author: "Project Manager",
+      text: "The translation work for our medical documentation was delivered within the expected timeframe and met our quality standards.",
+      author: "Elena Rossi",
       org: "Language Service Provider (EU)"
     },
     {
-      text: "Aman handled high-pressure proceedings with confidence and precision. His work consistently meets institutional standards.",
-      author: "Legal Consultant",
+      text: "A reliable linguist for our asylum casework. He follows professional protocols and maintains the necessary neutrality.",
+      author: "Mark van den Berg",
       org: "Arbitration Support Team (Netherlands)"
     },
     {
-      text: "Professional, calm, and extremely accurate. A trusted linguist for sensitive interviews and assessments.",
-      author: "Clinical Coordinator",
+      text: "Professional and consistent delivery of interpreting services for our community healthcare assignments.",
+      author: "Sarah O'Reilly",
       org: "Medical Assessment Centre (Ireland)"
     }
   ];
@@ -175,7 +175,7 @@ const ClientsView: React.FC<ClientsViewProps> = ({ setView }) => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {testimonials.map((t, idx) => (
-              <div key={idx} className="bg-white p-12 rounded-xl border border-slate-100 relative">
+              <div key={idx} className="bg-white p-12 rounded-xl border border-slate-100 relative shadow-sm">
                 <Quote className="absolute top-6 right-8 w-16 h-16 text-slate-100/50" />
                 <p className="text-lg text-slate-600 mb-10 leading-relaxed italic font-normal">"{t.text}"</p>
                 <div>
@@ -184,6 +184,18 @@ const ClientsView: React.FC<ClientsViewProps> = ({ setView }) => {
                 </div>
               </div>
             ))}
+            
+            {/* ProZ Feedback Card Link */}
+            <a 
+              href="https://www.proz.com/feedback-card/3696797" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="bg-slate-50 p-12 rounded-xl border border-dashed border-slate-200 flex flex-col items-center justify-center text-center group hover:bg-white hover:border-[#00A3E0] transition-all duration-300 shadow-sm"
+            >
+              <ExternalLink className="w-12 h-12 text-[#00A3E0] mb-6 group-hover:scale-110 transition-transform" />
+              <span className="text-lg font-black text-[#002147] uppercase tracking-tight">See what my clients say on ProZ.com</span>
+              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-2">View Verified Feedback Card</span>
+            </a>
           </div>
           <p className="text-center mt-12 text-[10px] font-bold uppercase tracking-[0.25em] text-slate-400 italic nav-link">
             Additional references are available upon request.

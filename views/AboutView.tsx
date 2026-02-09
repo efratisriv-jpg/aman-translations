@@ -67,10 +67,13 @@ const AboutView: React.FC<AboutViewProps> = ({ setView }) => {
                 <a href="https://www.proz.com/profile/3696797" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-[#002147] text-white px-6 py-3 rounded text-[10px] font-black uppercase tracking-widest hover:bg-[#00A3E0]">
                   <ExternalLink className="w-4 h-4" /> View ProZ Profile
                 </a>
+                <a href="https://www.atanet.org/member-directory/aman-desbele-baryahannes/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-[#002147] text-white px-6 py-3 rounded text-[10px] font-black uppercase tracking-widest hover:bg-[#00A3E0]">
+                  <ExternalLink className="w-4 h-4" /> View ATA Profile
+                </a>
                 <a href="https://www.iapti.org/member/aman-desbele-baryahannes/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-[#002147] text-white px-6 py-3 rounded text-[10px] font-black uppercase tracking-widest hover:bg-[#00A3E0]">
                   <ExternalLink className="w-4 h-4" /> View IAPTI Profile
                 </a>
-                <a href="https://www.proz.com/profile_resources/3696797_r68a6e7c1eb024.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 border border-[#002147] text-[#002147] px-6 py-3 rounded text-[10px] font-black uppercase tracking-widest hover:bg-slate-50">
+                <a href="https://www.proz.com/profile_resources/3696797_r6989232e65ea7.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 border border-[#002147] text-[#002147] px-6 py-3 rounded text-[10px] font-black uppercase tracking-widest hover:bg-slate-50">
                   <FileText className="w-4 h-4" /> Download PDF CV
                 </a>
               </div>
@@ -171,7 +174,7 @@ const AboutView: React.FC<AboutViewProps> = ({ setView }) => {
             </div>
             
             <div className="p-8 bg-white border border-slate-100 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 group">
-              <ShieldAlert className="w-8 h-8 text-[#002147] mb-8 group-hover:scale-110 transition-transform" />
+              <ShieldAlert className="w-8 h-8 text-[#00A3E0] mb-8 group-hover:scale-110 transition-transform" />
               <h4 className="text-sm font-black text-[#002147] mb-4 uppercase tracking-widest">Ethical Compliance</h4>
               <p className="text-[13px] text-slate-500 leading-relaxed font-medium">
                 Strict adherence to professional codes of conduct, such as BDÜ, FIT, AIIC & GDPR. I operate with complete transparency regarding professional secrecy.
