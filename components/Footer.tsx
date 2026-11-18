@@ -61,7 +61,7 @@ const Footer: React.FC<FooterProps> = ({ setView }) => {
               </a>
             </li>
             <li>
-              <a href="https://www.proz.com/profile_resources/3696797_r68a6e7c1eb024.pdf" target="_blank" rel="noopener noreferrer" className="text-sm font-bold tracking-normal flex items-center gap-2 hover:text-white nav-link text-white/70 transition-colors">
+              <a href="https://cfcdn.proz.com/profile_resources/3696797_r6af9fe3c00788.pdf" target="_blank" rel="noopener noreferrer" className="text-sm font-bold tracking-normal flex items-center gap-2 hover:text-white nav-link text-white/70 transition-colors">
                 Download CV (PDF) <FileText className="w-3.5 h-3.5" />
               </a>
             </li>

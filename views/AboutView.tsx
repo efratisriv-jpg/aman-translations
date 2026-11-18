@@ -73,7 +73,7 @@ const AboutView: React.FC<AboutViewProps> = ({ setView }) => {
                 <a href="https://www.iapti.org/member/aman-desbele-baryahannes/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-[#002147] text-white px-6 py-3 rounded text-[10px] font-black uppercase tracking-widest hover:bg-[#00A3E0]">
                   <ExternalLink className="w-4 h-4" /> View IAPTI Profile
                 </a>
-                <a href="https://www.proz.com/profile_resources/3696797_r6989232e65ea7.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 border border-[#002147] text-[#002147] px-6 py-3 rounded text-[10px] font-black uppercase tracking-widest hover:bg-slate-50">
+                <a href="https://cfcdn.proz.com/profile_resources/3696797_r6af9fe3c00788.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 border border-[#002147] text-[#002147] px-6 py-3 rounded text-[10px] font-black uppercase tracking-widest hover:bg-slate-50">
                   <FileText className="w-4 h-4" /> Download PDF CV
                 </a>
               </div>
